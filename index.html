@@ -1,6 +1,68 @@
 <html>
   <head>
+    <style>
+      * {margin:0;padding:0;}
+.nav {
+  border: 1px red dashed;
+  background: #00ffff;
+  text-align:center;
+  padding: 21px 0;
 
+  margin: 0 auto;
+  z-index:10; 
+  width:100%;
+  left:0;
+  right:0;
+}
+
+.header {
+  text-align:center;
+  padding: 65px 0;
+  border: 1px red dashed;
+}
+
+.content {
+  padding: 500px 0;
+  text-align:center;
+  border: 1px red dashed;
+}
+.footer {
+  padding: 100px 0;
+  text-align:center;
+  background: #777;
+  border: 1px red dashed;
+}
+    </style>
+    <script>
+      var startProductBarPos=-1;
+window.onscroll=function(){
+  var bar = document.getElementById('nav');
+  if(startProductBarPos<0)startProductBarPos=findPosY(bar);
+
+  if(pageYOffset>startProductBarPos){
+    bar.style.position='fixed';
+    bar.style.top=0;
+  }else{
+    bar.style.position='relative';
+  }
+
+};
+
+function findPosY(obj) {
+  var curtop = 0;
+  if (typeof (obj.offsetParent) != 'undefined' && obj.offsetParent) {
+    while (obj.offsetParent) {
+      curtop += obj.offsetTop;
+      obj = obj.offsetParent;
+    }
+    curtop += obj.offsetTop;
+  }
+  else if (obj.y)
+    curtop += obj.y;
+  return curtop;
+}
+    </script>
+    
   </head>
   <body>
     <div id="topImage" style="position:absolute; width: 100%; top: 0; left: 0; overflow: hidden;">
@@ -11,5 +73,10 @@
         test
       </div>
     </div>
+    
+    <header class="header">This is a Header</header>
+<div id="nav" class="nav">Main Navigation</div>
+<div class="content">Hello World!</div>
+<footer class="footer">This is a Footer</footer>
   </body>
 </html>
