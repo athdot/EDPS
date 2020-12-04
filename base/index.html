@@ -7,7 +7,11 @@
 
    body {
     background: #FEFFE5;
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
   }
+
 .nav {
 
   background: #EDF6D2;
@@ -30,14 +34,13 @@
 
 .content {
   padding: 500px 0;
-  text-align:center;
 }
 
 .lessercontent {
   width: 74%;
   z-index: 9;
-  position:relative;
-  top: 100;
+  position:absolute;
+  top: 350;
   left: 13%;
   font-weight: 50;
   color:#8D7864;
@@ -46,7 +49,10 @@
 }
 
 .footer {
+  position:absolute;
+  bottom: -100px;
   height: 100px;
+  width: 100%;
   text-align:center;
   background: #EDF6D2;
   box-shadow: -2px -2px 8px #888888;
@@ -83,9 +89,19 @@ text-shadow: 0px 0px #302923;
 </div>
 <div class="content">
 <div class="lessercontent">
-This is a test of the early warning system
-</div>
-</div>
+
+<div id="title" style="position:absolute;">Welcome to my E-Portfolio</div>
+<div style="width: 40%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 0;"></div>
+
+<div id="Quote" style="position:absolute; top:50; width: 50%; font-size: 24;">“It is not fine clothing, fancy horses, or even great wealth that make a king. It is by serving others that one becomes great” – Howard Fullmer, <i>The Kings Highway</i>
+<div style="width: 80%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 0;"></div>
+
+<div id="bodyText" style="position:relative; top: 64; font-size: 18; line-height: 1.8; width: 100%; float: left">
+
+text
+  
+  
+<div style="position: relative; font-family: Times New Roman; font-weight: 1; line-height: 1.25; width: 270%; top: 30; left: -35%">
 <footer class="footer" style="color:#8D7864;">
 <p style="position: relative; font-size: 10pt; text-align: right; width: 74%; left: 13%; z-index: 11;">
 <br>
@@ -95,7 +111,17 @@ Purdue University 2024 <br>
 Made in Colorado, USA<br><br>
 </p>
 </footer>
+</div>
+</div>
 
+</div>
+
+
+
+
+
+</div>
+</div>
 
     <script>
       var startProductBarPos=-1;
