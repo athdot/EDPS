@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+      * {margin:0;padding:0;}
+
+   body {
+    background: #FEFFE5;
+    position: relative;
+    min-height: 100%;
+    min-height: 100vh;
+  }
+
+.nav {
+
+  background: #EDF6D2;
+  height: 130px;
+  padding: 0px 0;
+
+  margin: 0 auto;
+  z-index:10; 
+  width:100%;
+  left:0;
+  right:0;
+
+  box-shadow: -2px 2px 8px #888888;
+}
+      
+      .header {
+  text-align:center;
+  padding: 100px 0;
+}
+
+.content {
+  padding: 100px 0;
+}
+
+.lessercontent {
+  width: 74%;
+  z-index: 9;
+  position:absolute;
+  top: 350;
+  left: 13%;
+  font-weight: 50;
+  color:#8D7864;
+  font-weight: 700;
+  font-family: 'Raleway', sans-serif;
+}
+
+.footer {
+  position:absolute;
+  bottom: -100px;
+  height: 100px;
+  width: 100%;
+  text-align:center;
+  background: #EDF6D2;
+  box-shadow: -2px -2px 8px #888888;
+}
+
+.topLink {
+  cursor: default;
+}
+
+.topLink:hover {
+  color: #302923;
+text-shadow: 0px 0px #302923;
+}
+    </style>
+  </head>
+  <body>
+    <div id="topImage" style="position:absolute; width: 100%; height: 200px; top: 0; z-index:-1; left: 0; overflow: hidden;">
+      <img src="https://athdot.github.io/EDPS/images/Portfolio.jpg" style="position:static; width: 100%; top: 0; left: 0; overflow: hidden;" />
+    </div>
+
+<header class="header"></header>
+<div id="nav" class="nav">
+  <div style="letter-spacing:0.4em; font-weight:bold; color:#8D7864; font-family: 'Raleway', sans-serif; position:relative; font-size: 40px; left: 13%; top:20%; z-index:10; width: 100%;">
+     CHARLES GRAHAM
+  </div>
+  <div style="width: 74%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 13%;"></div>
+  <div id="hyperlinks" style="width: 74%; z-index: 10; text-align: center; position:relative; top: 32; height: 50; left: 13%; font-weight: 50; font-family: 'Raleway', sans-serif; z-index:10;">
+    <div id="homeLink" class="topLink" style="width: 20%; position:absolute; left: 0%; top: 15;" onclick="window.location = 'https://athdot.github.io/EDPS'">Home</div>
+    <div id="aboutMe" class="topLink" style="width: 20%; position:absolute; left: 20%; top: 15;" onclick="window.location = 'https://athdot.github.io/EDPS/about/index.html'">About Me</div>
+    <div id="network" class="topLink" style="width: 20%; position:absolute; left: 40%; top: 15;" onclick="window.location = 'https://athdot.github.io/EDPS/network/index.html'">Networking</div>
+    <div id="homeLink" class="topLink" style="width: 20%; position:absolute; left: 60%; top: 15;" onclick="window.location = 'https://athdot.github.io/EDPS/other/index.html'">Other</div>
+    <div id="homeLink" class="topLink" style="width: 20%; position:absolute; left: 80%; top: 15;" onclick="window.location = 'https://athdot.github.io/EDPS/contact/index.html'">Contact Me</div>
+  </div>
+</div>
+<div class="content">
+<div class="lessercontent">
+
+<div id="title" style="position:absolute;">Other Research & Projects</div>
+<div style="width: 100%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 0;"></div>
+
+<div id="Quote" style="position:absolute; top:50; width: 50%; font-size: 24;">
+
+<div id="bodyText" style="position:relative; top: 0; font-size: 18; line-height: 1.8; width: 100%; float: left">
+
+&emsp;&emsp;Roadtrip nation:
+<div style="width: 80%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 0;"></div>
+<br>
+<div style="width:200%"><br>
+
+<embed src="https://athdot.github.io/EDPS/other/roadtrip.pdf" style="width: 100%; height: 1000px">
+
+
+<div style="width: 100%; height: 1px; z-index: 10; background-color: #8D7864; position:relative; top: 32; left: 0;"></div>
+<br>
+
+<div style="position: relative; font-family: Times New Roman; font-weight: 1; line-height: 1.25; width: 135%; top: 30; left: -17.5%">
+<footer class="footer" style="color:#8D7864;">
+<p style="position: relative; font-size: 10pt; text-align: right; width: 74%; left: 13%; z-index: 11;">
+<br>
+Charles Graham <br>
+Undergraduate Student <br>
+Purdue University 2024 <br>
+Made in Colorado, USA<br><br>
+</p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+    <script>
+      var startProductBarPos=-1;
+window.onscroll=function(){
+  var bar = document.getElementById('nav');
+  if(startProductBarPos<0)startProductBarPos=findPosY(bar);
+
+  if(pageYOffset>startProductBarPos){
+    bar.style.position='fixed';
+    bar.style.top=0;
+  }else{
+    bar.style.position='relative';
+  }
+
+};
+
+function findPosY(obj) {
+  var curtop = 0;
+  if (typeof (obj.offsetParent) != 'undefined' && obj.offsetParent) {
+    while (obj.offsetParent) {
+      curtop += obj.offsetTop;
+      obj = obj.offsetParent;
+    }
+    curtop += obj.offsetTop;
+  }
+  else if (obj.y)
+    curtop += obj.y;
+  return curtop;
+}
+    </script>
+  </body>
+</html>
